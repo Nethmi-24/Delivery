@@ -13,7 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeliveryResponse {
     private String id;
+    private String order_id;
+    private String delPerson_id;
     private String delPerson_name;
     private String status;
-
 }

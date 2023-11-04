@@ -19,12 +19,13 @@ public class DeliveryService {
 
     public void createDelivery(DeliveryRequest deliveryRequest){
         Delivery delivery= Delivery.builder()
-                .delivery_id(deliveryRequest.getDelivery_id())
+                .order_id(deliveryRequest.getOrder_id())
+                .delPerson_id(deliveryRequest.getDelPerson_id())
                 .delPerson_name(deliveryRequest.getDelPerson_name())
                 .status(deliveryRequest.getStatus())
                 .build();
         deliveryRepository.save(delivery);
-        log.info("Delivery {} is saved",delivery.getDelivery_id());
+        log.info("Delivery {} is saved",delivery.getId());
 
     }
 
@@ -34,7 +35,9 @@ public class DeliveryService {
     }
     private DeliveryResponse mapToDeliveryResponse (Delivery delivery){
         return DeliveryResponse.builder()
-                .delivery_id(delivery.getDelivery_id())
+                .id(delivery.getId())
+                .order_id(delivery.getOrder_id())
+                .delPerson_id(delivery.getDelPerson_id())
                 .delPerson_name(delivery.getDelPerson_name())
                 .status(delivery.getStatus())
                 .build();
