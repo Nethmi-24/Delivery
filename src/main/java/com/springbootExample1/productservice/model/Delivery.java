@@ -17,7 +17,9 @@ import java.math.BigDecimal;
 @Data
 public class Delivery {
     @Id
-    private String delivery_id;
+    private String id;
+    private String order_id;
+    private String delPerson_id;
     private String delPerson_name;
     private String status;
 }
