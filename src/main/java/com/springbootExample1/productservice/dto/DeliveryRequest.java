@@ -13,8 +13,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DeliveryRequest {
-    
-    private String delivery_id;
+
+    private String order_id;
+    private String delPerson_id;
     private String delPerson_name;
     private String status;
 
