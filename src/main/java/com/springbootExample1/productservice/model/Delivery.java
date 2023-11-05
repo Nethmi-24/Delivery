@@ -21,5 +21,7 @@ public class Delivery {
     private String order_id;
     private String delPerson_id;
     private String delPerson_name;
-    private String status;
+    private String status = "pending";
+
 }
+
